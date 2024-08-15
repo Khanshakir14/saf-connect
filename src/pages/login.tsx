@@ -2,15 +2,18 @@ import type React from "preact/compat";
 import { Layout } from "../layouts/header";
 import { toast } from "sonner";
 import { useLocation } from "preact-iso";
+import { useState } from "preact/hooks";
 
 export const Login = () => {
-	const { route } = useLocation();
+	const [loading, setLoading] = useState(false);
+	const {route} = useLocation()
 	return (
 		<Layout>
 			<div class="divide-y divide-gray-300/50">
 				<form
 					onSubmit={async (e) => {
 						e.preventDefault();
+						setLoading(true)
 						const form = new FormData(e.currentTarget);
 						const name = form.get("name") as string;
 						const password = form.get("password") as string;
@@ -42,8 +45,11 @@ export const Login = () => {
 							.then(() => {
 								toast.success("Signed up succsfully");
 							})
-							.catch(() => toast.error("Failed to sign up"));
-						window.location.href = "/dashboard";
+							.catch(() => toast.error("Failed to sign up"))
+							.finally(()=>{
+								setLoading(false)
+								route('/dashboard');
+							});
 					}}
 					class="space-y-3 py-8 text-base leading-7 text-gray-600"
 				>
@@ -173,7 +179,24 @@ export const Login = () => {
 						type="submit"
 						class="container block max-w-max self-center rounded-md border-2 bg-sky-500 p-2 text-neutral-100"
 					>
-						Create an account
+						{!loading ? (
+							<>Create an account</>
+						) : (
+							<div class="flex items-center gap-2">
+								<svg
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									class="size-6 animate-spin"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill="currentColor"
+										d="M12 4V2A10 10 0 0 0 2 12h2a8 8 0 0 1 8-8"
+									/>
+								</svg>{" "}
+								please wait...
+							</div>
+						)}
 					</button>
 				</form>
 			</div>
