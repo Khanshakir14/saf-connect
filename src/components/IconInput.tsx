@@ -20,7 +20,7 @@ const IconInput = ({
 }: Partial<IconInputProps>) => {
 	return (
 		<label class="block">
-			<span class="text-gray-700">Full name</span>
+			<span class="text-gray-700">{label}</span>
 			<div class="relative">
 				<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
 					<svg
@@ -43,7 +43,7 @@ const IconInput = ({
 				) : (
 					<input
 						type={type}
-						class="mt-1 block w-full rounded-md border-gray-300 pl-10 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+						class="mt-1 block w-full rounded-md border-gray-300 pl-10 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-neutral-800"
 						placeholder={placeholder}
 						name={name}
 						{...props}

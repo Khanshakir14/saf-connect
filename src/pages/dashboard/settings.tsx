@@ -41,6 +41,8 @@ const SurgeryIconPath = (
 const Settings = () => {
 	return (
 		<DashboardLayout>
+      <main class="space-y-4 px-4">
+        <h2 class="py-6 uppercase text-xs text-neutral-500 font-bold">Settings</h2>
 			<IconInput name="name" placeholder="Joe Shmoe" label="Full name" />
 			<IconInput
 				name="dob"
@@ -82,7 +84,7 @@ const Settings = () => {
 				label="Past alergies"
 				textarea
 				iconPath={SurgeryIconPath}
-			/>
+			/></main>
 		</DashboardLayout>
 	);
 };

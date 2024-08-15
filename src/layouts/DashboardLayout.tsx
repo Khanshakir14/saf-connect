@@ -57,7 +57,7 @@ const DashboardLayout = ({ children }) => {
 			</header>
 			{children}
 
-			<footer class="fixed bottom-0 container w-full shadow-lg rounded-xl">
+			<footer class={`${isSettings ? 'bg-fixed' : 'fixed'} mt-5 bottom-0 container w-full shadow-lg rounded-xl`}>
 				<div class="flex justify-evenly items-center text-neutral-400 text-xs text-center py-2">
 					<a
 						href="/dashboard/home"

@@ -43,12 +43,12 @@ const Login = () => {
 						)
 							.then((r) => r.json())
 							.then(() => {
+								route('/dashboard', true);
 								toast.success("Signed up succsfully");
 							})
 							.catch(() => toast.error("Failed to sign up"))
 							.finally(()=>{
 								setLoading(false)
-								route('/dashboard');
 							});
 					}}
 					class="space-y-3 py-8 text-base leading-7 text-gray-600"
