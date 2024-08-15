@@ -8,10 +8,12 @@
 	},
 	"dependencies": {
 		"@tailwindcss/forms": "^0.5.7",
+		"classix": "^2.1.38",
 		"pocketbase": "^0.21.4",
 		"preact": "^10.22.1",
 		"preact-iso": "^2.6.3",
 		"preact-render-to-string": "^6.5.9",
+		"sonner": "^1.5.0",
 		"swr": "^2.2.5"
 	},
 	"devDependencies": {
