@@ -1,0 +1,35 @@
+
+@layer base {
+  label {
+    @apply relative inline-block h-6;
+  }
+
+  [type="checkbox"] {
+    @apply inline-block h-0 w-11 cursor-pointer;
+    @apply focus:outline-0 dark:focus:outline-0;
+    @apply border-0 dark:border-0;
+    @apply focus:ring-offset-transparent dark:focus:ring-offset-transparent;
+    @apply focus:ring-transparent dark:focus:ring-transparent;
+    @apply focus-within:ring-0 dark:focus-within:ring-0;
+    @apply focus:shadow-none dark:focus:shadow-none;
+
+    @apply before:absolute after:absolute;
+    @apply before:top-0 after:top-0;
+    @apply before:inline-block after:block;
+    @apply before:rounded-full after:rounded-full;
+
+    @apply after:ml-0.5 after:mt-0.5 after:h-5 after:w-5 after:content-[''];
+    @apply after:shadow-md after:duration-100;
+
+    @apply before:h-full before:w-10 before:content-[''];
+    @apply before:shadow-[inset_0_0_#000];
+
+    @apply after:bg-white dark:after:bg-gray-50;
+    @apply before:bg-gray-300 dark:before:bg-gray-600;
+    @apply before:checked:bg-sky-500 dark:before:checked:bg-sky-500;
+    @apply checked:after:translate-x-4 checked:after:duration-300;
+
+    @apply disabled:cursor-not-allowed disabled:after:bg-opacity-75;
+    @apply disabled:checked:before:bg-opacity-40;
+  }
+}
