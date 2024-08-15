@@ -1,16 +1,16 @@
-import { LocationProvider, Router, Route, hydrate, prerender as ssr } from 'preact-iso';
+import { LocationProvider, Router, Route, hydrate, prerender as ssr, lazy } from 'preact-iso';
 
 import { NotFound } from './pages/_404.jsx';
 import './style.css';
-import Home from './pages/home.js';
-import DashboardHome from './pages/dashboard/home.js';
-import { Login } from './pages/login.js';
-import Beds from './pages/beds.js';
+const Home = lazy(()=>import('./pages/home.js'));
+const DashboardHome = lazy(()=>import('./pages/dashboard/home.js'));
+const Login = lazy(()=>import('./pages/login.js'));
+const Beds = lazy(()=>import('./pages/beds.js'));
 import { Toaster } from 'sonner'
-import Hospital from './pages/dashboard/hospital.js';
-import Chats from './pages/dashboard/chats.js';
-import Notifs from './pages/dashboard/notifs.js';
-import Settings from './pages/dashboard/settings.js';
+const Hospital = lazy(()=>import('./pages/dashboard/hospital.js'));
+const Chats = lazy(()=>import('./pages/dashboard/chats.js'));
+const Notifs = lazy(()=>import('./pages/dashboard/notifs.js'));
+const Settings = lazy(()=>import('./pages/dashboard/settings.js'));
 
 export function App() {
 	return (

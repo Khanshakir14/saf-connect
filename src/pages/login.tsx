@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { useLocation } from "preact-iso";
 import { useState } from "preact/hooks";
 
-export const Login = () => {
+const Login = () => {
 	const [loading, setLoading] = useState(false);
 	const {route} = useLocation()
 	return (
@@ -242,3 +242,5 @@ export const Login = () => {
 		</Layout>
 	);
 };
+
+export default Login

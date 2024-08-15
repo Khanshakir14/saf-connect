@@ -40,7 +40,7 @@ const DashboardLayout = ({ children }) => {
 						/>
 					</svg>
 				</button>
-				<ul class="space-y-2 divide-y-2 rounded-lg px-4 py-2 shadow scale-0 peer-focus:scale-100 fixed right-5 bg-current top-8 transition-transform">
+				<ul class="space-y-2 divide-y-2 rounded-lg px-4 py-2 shadow scale-0 peer-focus:scale-100 fixed right-5 bg-current top-8 transition-transform text-neutral-600">
 					<li class="hover:bg-neutral-100">
 						<a href="wards">Wards</a>
 					</li>
