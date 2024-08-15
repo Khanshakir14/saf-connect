@@ -35,7 +35,7 @@ const IconInput = ({
 				{textarea ? (
 					<textarea
 						type={type}
-						class="mt-1 block w-full rounded-md border-gray-300 pl-10 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+						class="mt-1 block w-full rounded-md border-gray-300 pl-10 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-neutral-800"
 						placeholder={placeholder}
 						name={name}
 						{...props}
