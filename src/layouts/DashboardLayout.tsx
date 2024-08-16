@@ -1,5 +1,6 @@
 import cx from "classix";
 import { useLocation } from "preact-iso";
+import React, { useRef } from "preact/compat";
 
 const DashboardLayout = ({ children }) => {
 	const { path } = useLocation();
@@ -10,10 +11,18 @@ const DashboardLayout = ({ children }) => {
 	const isNotifs = path.endsWith("/dashboard/notifs");
 	const isSettings = path.endsWith("/dashboard/settings");
 
+	const [menu, setMenu] = React.useState(false);
+	const menuRef = useRef(null);
+	const menuButtonRef = useRef(null);
+
 	return (
 		<>
-			<header class="flex bg-fixed shadow-md p-2 items-between justify-between">
-				<div class="flex">
+			<header class="flex justify-between p-2 bg-fixed shadow-md items-between">
+				<div
+					class="flex"
+					onClick={() => setMenu(false)}
+					onKeyUp={() => setMenu(false)}
+				>
 					<svg
 						aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +34,9 @@ const DashboardLayout = ({ children }) => {
 							d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"
 						/>
 					</svg>
-					<span class="font-semibold text-xl px-2">SAF Connect</span>
+					<span class="px-2 text-xl font-semibold">SAF Connect</span>
 				</div>
-				<button type="button" class="peer">
+				<button type="button" onClick={() => setMenu(s=>!s)} ref={menuButtonRef}>
 					<svg
 						aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg"
@@ -40,25 +49,34 @@ const DashboardLayout = ({ children }) => {
 						/>
 					</svg>
 				</button>
-				<ul class="space-y-2 divide-y-2 rounded-lg px-4 py-2 shadow scale-0 peer-focus:scale-100 fixed right-5 bg-current top-8 transition-transform text-neutral-600">
-					<li class="hover:bg-neutral-100">
-						<a href="wards">Wards</a>
+				<ul
+					ref={menuRef}
+					class={cx(
+						!menu ? "scale-0" : "scale-100",
+						"fixed right-5 top-8 px-4 py-2 space-y-2 rounded-lg divide-y-2 shadow transition-transform bg-neutral-600 text-neutral-50",
+					)}
+				>
+					<li class="hover:bg-neutral-400">
+						<a href="/wards">Wards</a>
 					</li>
-					<li class="hover:bg-neutral-100">
-						<a href="beds">Beds</a>
+					<li class="hover:bg-neutral-400">
+						<a href="/beds">Beds</a>
 					</li>
-					<li class="hover:bg-neutral-100">
-						<a href="doctors">Doctors</a>
+					<li class="hover:bg-neutral-400">
+						<a href="/doctors">Doctors</a>
 					</li>
-					<li class="hover:bg-neutral-100">
-						<a href="labs">Labs</a>
+					<li class="hover:bg-neutral-400">
+						<a href="/labs">Labs</a>
 					</li>
 				</ul>
 			</header>
-			{children}
-
-			<footer class={`${isSettings ? 'bg-fixed' : 'fixed'} mt-5 bottom-0 container w-full shadow-lg rounded-xl`}>
-				<div class="flex justify-evenly items-center text-neutral-400 text-xs text-center py-2">
+			<main class="container px-6 mb-16" onKeyUp={() => setMenu(false)}>{children}</main>
+			<footer
+				class={"container fixed bottom-0 mt-5 w-full bg-white rounded-xl shadow-lg"}
+				onClick={() => setMenu(false)}
+				onKeyUp={() => setMenu(false)}
+			>
+				<div class="flex justify-evenly items-center py-2 text-xs text-center text-neutral-400">
 					<a
 						href="/dashboard/home"
 						class={cx(
@@ -69,7 +87,7 @@ const DashboardLayout = ({ children }) => {
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="size-6 mx-auto"
+							class="mx-auto size-6"
 							viewBox="0 0 24 24"
 						>
 							<path
@@ -89,7 +107,7 @@ const DashboardLayout = ({ children }) => {
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="size-6 mx-auto"
+							class="mx-auto size-6"
 							viewBox="0 0 256 256"
 						>
 							<path
@@ -109,7 +127,7 @@ const DashboardLayout = ({ children }) => {
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="size-6 mx-auto"
+							class="mx-auto size-6"
 							viewBox="0 0 24 24"
 						>
 							<path fill="currentColor" d="M20 14h-6v6h-4v-6H4v-4h6V4h4v6h6z" />
@@ -126,7 +144,7 @@ const DashboardLayout = ({ children }) => {
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="size-6 mx-auto"
+							class="mx-auto size-6"
 							viewBox="0 0 24 24"
 						>
 							<path
@@ -146,7 +164,7 @@ const DashboardLayout = ({ children }) => {
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="size-6 mx-auto"
+							class="mx-auto size-6"
 							viewBox="0 0 24 24"
 						>
 							<path

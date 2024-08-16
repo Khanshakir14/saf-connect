@@ -5,7 +5,7 @@ import './style.css';
 const Home = lazy(()=>import('./pages/home.js'));
 const DashboardHome = lazy(()=>import('./pages/dashboard/home.js'));
 const Login = lazy(()=>import('./pages/login.js'));
-const Beds = lazy(()=>import('./pages/beds.js'));
+import Beds from './pages/beds.js'
 import { Toaster } from 'sonner'
 const Hospital = lazy(()=>import('./pages/dashboard/hospital.js'));
 const Chats = lazy(()=>import('./pages/dashboard/chats.js'));

@@ -1,19 +1,21 @@
+import Switch from "../components/Switch";
+import DashboardLayout from "../layouts/DashboardLayout";
 import { Layout } from "../layouts/header";
 
 const Beds = () => (
-	<Layout>
+	<DashboardLayout>
 		<div class="divide-y divide-gray-300/50">
 			<div
 				action="https://tailwindcss.com/docs"
 				method="post"
-				class="space-y-8 py-8 text-base leading-7 text-gray-600"
+				class="py-8 space-y-8 text-base leading-7 text-gray-600"
 			>
 				<div class="container flex justify-between">
 					<p class="flex text-xl font-light">
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="mr-2 size-8 text-sky-500"
+							class="mr-2 text-sky-500 size-8"
 							viewBox="0 0 256 256"
 						>
 							<g fill="currentColor">
@@ -28,12 +30,12 @@ const Beds = () => (
 					</p>
 					<button
 						type="button"
-						class="container flex max-w-max items-center rounded-md border-2 bg-sky-500 px-2 py-1 text-neutral-100"
+						class="container flex items-center px-2 py-1 max-w-max bg-sky-500 rounded-md border-2 text-neutral-100"
 					>
 						<svg
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							class="size-6 pt-1"
+							class="pt-1 size-6"
 							viewBox="0 0 24 24"
 						>
 							<path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z" />
@@ -42,16 +44,16 @@ const Beds = () => (
 					</button>
 				</div>
 				<label>
-					<input id="one" type="checkbox" class="peer" checked />
+					<Switch id="one" type="checkbox" class="peer" checked />
 					<span>Ward 14</span>
 
-					<div class="mt-2 hidden space-y-2 peer-checked:block">
+					<div class="hidden mt-2 space-y-2 peer-checked:block">
 						<div class="inline-flex max-w-fit">
-							<div class="containertext-nowrap mx-1 rounded bg-sky-300 px-2 text-white first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 text-white bg-sky-300 rounded containertext-nowrap first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
-									class="size-8 text-sky-700"
+									class="text-sky-700 size-8"
 									viewBox="0 0 24 24"
 								>
 									<path
@@ -61,7 +63,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +78,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +93,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +108,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +123,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -138,11 +140,11 @@ const Beds = () => (
 							</div>
 						</div>
 						<div class="inline-flex max-w-fit">
-							<div class="containertext-nowrap mx-1 rounded bg-sky-300 px-2 text-white first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 text-white bg-sky-300 rounded containertext-nowrap first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
-									class="size-8 text-sky-700"
+									class="text-sky-700 size-8"
 									viewBox="0 0 24 24"
 								>
 									<path
@@ -152,7 +154,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +169,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +184,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +199,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +214,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -231,16 +233,16 @@ const Beds = () => (
 					</div>
 				</label>
 				<label>
-					<input id="one" type="checkbox" class="peer" checked />
+					<Switch id="one" type="checkbox" class="peer" checked />
 					<span>Ward 43</span>
 
-					<div class="mt-2 hidden space-y-2 peer-checked:block">
+					<div class="hidden mt-2 space-y-2 peer-checked:block">
 						<div class="inline-flex max-w-fit">
-							<div class="containertext-nowrap mx-1 rounded bg-sky-300 px-2 text-white first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 text-white bg-sky-300 rounded containertext-nowrap first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
-									class="size-8 text-sky-700"
+									class="text-sky-700 size-8"
 									viewBox="0 0 24 24"
 								>
 									<path
@@ -250,7 +252,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +267,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -280,7 +282,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +297,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -310,7 +312,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -327,11 +329,11 @@ const Beds = () => (
 							</div>
 						</div>
 						<div class="inline-flex max-w-fit">
-							<div class="containertext-nowrap mx-1 rounded bg-sky-300 px-2 text-white first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 text-white bg-sky-300 rounded containertext-nowrap first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
-									class="size-8 text-sky-700"
+									class="text-sky-700 size-8"
 									viewBox="0 0 24 24"
 								>
 									<path
@@ -341,7 +343,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -356,7 +358,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -371,7 +373,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -386,7 +388,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -401,7 +403,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -420,16 +422,16 @@ const Beds = () => (
 					</div>
 				</label>
 				<label>
-					<input id="one" type="checkbox" class="peer" checked />
+					<Switch id="one" type="checkbox" class="peer" checked />
 					<span>Ward 4</span>
 
-					<div class="mt-2 hidden space-y-2 peer-checked:block">
+					<div class="hidden mt-2 space-y-2 peer-checked:block">
 						<div class="inline-flex max-w-fit">
-							<div class="containertext-nowrap mx-1 rounded bg-sky-300 px-2 text-white first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 text-white bg-sky-300 rounded containertext-nowrap first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
-									class="size-8 text-sky-700"
+									class="text-sky-700 size-8"
 									viewBox="0 0 24 24"
 								>
 									<path
@@ -439,7 +441,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -454,7 +456,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -469,7 +471,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -484,7 +486,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -499,7 +501,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -516,11 +518,11 @@ const Beds = () => (
 							</div>
 						</div>
 						<div class="inline-flex max-w-fit">
-							<div class="containertext-nowrap mx-1 rounded bg-sky-300 px-2 text-white first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 text-white bg-sky-300 rounded containertext-nowrap first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
-									class="size-8 text-sky-700"
+									class="text-sky-700 size-8"
 									viewBox="0 0 24 24"
 								>
 									<path
@@ -530,7 +532,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -545,7 +547,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -560,7 +562,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -575,7 +577,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -590,7 +592,7 @@ const Beds = () => (
 								</svg>
 								<span>B-45</span>
 							</div>
-							<div class="containertext-nowrap mx-1 max-h-min max-w-max rounded bg-neutral-200 px-2 text-neutral-500 first:ml-0 hover:bg-sky-100">
+							<div class="px-2 mx-1 max-w-max rounded containertext-nowrap max-h-min bg-neutral-200 text-neutral-500 first:ml-0 hover:bg-sky-100">
 								<svg
 									aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg"
@@ -610,7 +612,7 @@ const Beds = () => (
 				</label>
 			</div>
 		</div>
-	</Layout>
+	</DashboardLayout>
 );
 
 export default Beds;

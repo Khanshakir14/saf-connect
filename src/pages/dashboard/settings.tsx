@@ -41,50 +41,54 @@ const SurgeryIconPath = (
 const Settings = () => {
 	return (
 		<DashboardLayout>
-      <main class="space-y-4 px-4">
-        <h2 class="py-6 uppercase text-xs text-neutral-500 font-bold">Settings</h2>
-			<IconInput name="name" placeholder="Joe Shmoe" label="Full name" />
-			<IconInput
-				name="dob"
-				type="date"
-				placeholder="8/10/2002"
-				label="Date of Birth"
-				iconPath={DOBiconPath}
-			/>
-			<IconInput
-				name="gender"
-				placeholder="Male/Female"
-				label="Gender"
-				iconPath={GenderIconPath}
-			/>
-			<IconInput
-				name="phone"
-				type="tel"
-				placeholder="555-555-5555"
-				label="Phone"
-				iconPath={PhoneIconPath}
-			/>
-			<IconInput
-				name="email"
-				type="email"
-				placeholder="joe@shmoe.com"
-				label="Email"
-				iconPath={EmailIconPath}
-			/>
-			<IconInput
-				name="allergies"
-				placeholder="Allergy with peanuts"
-				label="Known alergies"
-				textarea
-				iconPath={AllergyIconPath}
-			/>
-			<IconInput
-				name="surgeries"
-				placeholder="Root canal operation"
-				label="Past alergies"
-				textarea
-				iconPath={SurgeryIconPath}
-			/></main>
+			<main class="px-4 pb-16 space-y-16">
+				<h2 class="pt-6 pb-1 text-xs font-bold uppercase text-neutral-500">
+					Settings
+				</h2>
+				<IconInput name="name" placeholder="Joe Shmoe" label="Full name" />
+				<IconInput
+					name="dob"
+					type="date"
+					placeholder="8/10/2002"
+					label="Date of Birth"
+					iconPath={DOBiconPath}
+				/>
+				<IconInput
+					name="gender"
+					placeholder="Male/Female"
+					label="Gender"
+					iconPath={GenderIconPath}
+				/>
+				<IconInput
+					name="phone"
+					type="tel"
+					placeholder="555-555-5555"
+					label="Phone"
+					iconPath={PhoneIconPath}
+				/>
+				<IconInput
+					name="email"
+					type="email"
+					placeholder="joe@shmoe.com"
+					label="Email"
+					iconPath={EmailIconPath}
+				/>
+				<IconInput
+					name="allergies"
+					placeholder="Allergy with peanuts"
+					label="Known alergies"
+					textarea
+					iconPath={AllergyIconPath}
+				/>
+				<div class="mt-6"/>
+				<IconInput
+					name="surgeries"
+					placeholder="Root canal operation"
+					label="Past alergies"
+					textarea
+					iconPath={SurgeryIconPath}
+				/>
+			</main>
 		</DashboardLayout>
 	);
 };

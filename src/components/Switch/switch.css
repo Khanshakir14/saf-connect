@@ -1,11 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   label {
-    @apply relative inline-block h-6;
+    @apply inline-block relative h-6;
   }
 
   [type="checkbox"] {
-    @apply inline-block h-0 w-11 cursor-pointer;
+    @apply inline-block w-11 h-0 cursor-pointer;
     @apply focus:outline-0 dark:focus:outline-0;
     @apply border-0 dark:border-0;
     @apply focus:ring-offset-transparent dark:focus:ring-offset-transparent;
